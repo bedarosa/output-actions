@@ -7,8 +7,8 @@ on:
 
 jobs:
   job1:
-    uses: ./.github/workflows/job1.yml@main  # Adicione a versão (branch ou tag) aqui
+    uses: ./.github/workflows/job1.yml  # Adicione a versão (branch ou tag) aqui
 
   job2:
-    uses: ./.github/workflows/job2.yml@main  # Adicione a versão (branch ou tag) aqui
+    uses: ./.github/workflows/job2.yml  # Adicione a versão (branch ou tag) aqui
     needs: job1
