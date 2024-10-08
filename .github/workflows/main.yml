@@ -10,5 +10,7 @@ jobs:
     uses: ./.github/workflows/job1.yml
 
   job2:
-    uses: ./.github/workflows/job2.yml 
+    uses: ./.github/workflows/job2.yml
+    with:
+      INPUT_TESTE: Foi meu chapa
     needs: job1
