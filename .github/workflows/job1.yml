@@ -1,0 +1,12 @@
+name: Job 1
+
+on: [workflow_call]  # Este job pode ser chamado por outro workflow
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      output1: ${{ steps.step1.outputs.result }}
+    steps:
+      - id: step1
+        run: echo "result=hello" >> "$GITHUB_OUTPUT"

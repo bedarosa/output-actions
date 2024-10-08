@@ -1,0 +1,14 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job1:
+    uses: ./job1.yml
+
+  job2:
+    uses: ./job2.yml
+    needs: job1
