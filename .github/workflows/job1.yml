@@ -7,10 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Random Number
+        id: random_number
         run: |
-          echo "TESTE=2024" >> $GITHUB_ENV
+          echo "TESTE=2024" >> $GITHUB_OUTPUT
 
       - name: Display Random Number
         run: |
-          echo "Teste = ${{ env.TESTE }}"
+          echo "Teste = ${{ steps.random_number.outputs.TESTE }}"
 
