@@ -12,6 +12,6 @@ jobs:
   job2:
     uses: ./.github/workflows/job2.yml
     needs: job1
-    with:
-      INPUT_TESTE: ${{ needs.job1.outputs.TESTE }}
+    #with:
+      #INPUT_TESTE: ${{ env.TESTE }}
     

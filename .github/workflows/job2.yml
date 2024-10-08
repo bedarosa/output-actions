@@ -19,4 +19,4 @@ jobs:
     needs: job2  # Agora esse job depende do job2
     steps:
       - name: Use Output from Job 1
-        run: echo Output from Job 1 ${{ inputs.INPUT_TESTE }}
+        run: echo Output from Job 1 ${{ env.TESTE }}

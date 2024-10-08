@@ -9,9 +9,9 @@ jobs:
       - name: Get Random Number
         id: random_number
         run: |
-          echo "TESTE=2024" >> $GITHUB_OUTPUT
+          echo "TESTE=2024" >> $GITHUB_ENV
 
       - name: Display Random Number
         run: |
-          echo "Teste = ${{ steps.random_number.outputs.TESTE }}"
+          echo "Teste = ${{ env.TESTE }}"
 
